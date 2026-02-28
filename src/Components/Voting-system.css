@@ -1,0 +1,365 @@
+/* Color variables */
+:root {
+  --primary-yellow: #ffd600;
+  --primary-yellow-dark: #e6be00;
+  --background: #f7f7f7;
+  --border: #000;
+  --button-text: #000;
+  --error: #d32f2f;
+  --error-bg: #fff3f3;
+}
+
+/* Make the page take full height and use flex layout */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background); /* Ensures the page background is grey */
+}
+
+/* Main content grows to fill space between navbar and footer */
+.welcome-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;      /* Make all main content scrollable */
+  width: 100%;
+  padding-top: 60px; /* Add this line to offset the fixed navbar */
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+/* Generic button style */
+.button {
+  background: var(--primary-yellow);
+  color: var(--button-text);
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover{
+  background: var(--primary-yellow-dark);
+  color: #000;
+}
+
+.button-secondary {
+  background: #eee;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  outline: none;
+  display: inline-block;
+}
+
+.button-secondary:hover {
+  background: #ccc;
+  color: #000;
+}
+
+
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 40px 32px 32px 32px;
+  min-width: 340px;
+  max-width: 500px;
+  margin-top: 25px;    /* Adjust this for top spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add this for the button container inside the card */
+.card .card-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 25px; /* Same as margin-top on .card for symmetry */
+}
+
+.card-alt {
+  background: var(--background);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 40px 32px 32px 32px;
+  min-width: 340px;
+  max-width: 500px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-wide {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 40px 32px 32px 32px;
+  min-width: 680px;
+  max-width: 700px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.card-wide h1 {
+  margin-top: 0;
+}
+
+/* Footer styles */
+.footer {
+  background: #fff; /* or another non-grey color */
+  /* ...other styles... */
+}
+
+
+
+
+
+.modal-backdrop-voting {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-voting {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 32px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.modal-actions-voting {
+  margin-top: 24px;
+  display: inline-flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.button,
+.button-secondary {
+  display: inline-block;
+  margin-top: 24px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+/* Headings and text elements */
+h1 {
+ font-size: 2.5rem;
+  font-weight: bold;
+  margin: 32px 0 8px 0;
+  margin-top: 70px;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 24px 0 16px 0;
+  text-align: center;
+}
+
+.text-main {
+  color: #444;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  max-width: 750px;
+}
+
+.text-small {
+  color: #444;
+  font-size: 1.1rem;
+  margin-top: 16px;
+}
+body {
+  font-family: 'YourFontName', sans-serif;
+}
+
+
+/* Error overlay styling */
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.error-message {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 600px) {
+  .page-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .welcome-main {
+    padding-top: 48px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .button,
+  .button-secondary {
+    font-size: 1rem;
+    padding: 10px 0.5em;
+    width: 80%;
+    min-width: 0;
+    margin: 16px 0 0 0;
+    height: auto;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .card,
+  .card-alt {
+    min-width: 0;
+    max-width: 90%!important;
+    width: 98vw;
+    padding: 18px 6px 16px 6px;
+    margin-top: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .card-wide {
+    min-width: 0;
+    max-width: 90%;
+    width: 100vw;
+    padding: 18px 6px 16px 6px;
+    margin-top: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .card .card-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin: 24px 0 8px 0;
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin: 16px 0 10px 0;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .text-main {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    max-width: 98vw;
+    padding: 0 2vw;
+    text-align: left;
+  }
+
+  .text-small {
+    font-size: 0.97rem;
+    margin-top: 10px;
+    padding: 0 2vw;
+  }
+
+  .footer {
+    padding: 18px 6px 12px 6px;
+    font-size: 0.97rem;
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+
+
+  /* Error overlay and message */
+  .error-overlay {
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .error-message {
+    font-size: 1rem;
+    padding: 12px;
+    max-width: 90vw;
+  }
+
+  .text-main {
+    padding-top:0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+   
+
+
+@media (max-width: 600px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+}

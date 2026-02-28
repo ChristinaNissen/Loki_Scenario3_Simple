@@ -1,0 +1,348 @@
+.study-center-bg {
+  min-height: 100vh;
+  background: #e3f0ff;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.study-center-bg > * {
+  width: 100%;
+  max-width: 600px;
+}
+
+.study-center-content {
+  border-radius: 16px;
+  padding: 48px 36px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.study-button {
+  padding: 0.7em 2.5em;
+  font-size: 1.1rem!important;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start; /* aligns button to left */
+  margin-top: 0.7em;
+  width: auto; /* only as wide as content */
+  min-width: 8rem; /* optional: minimum width for consistency */
+  font-weight: bold;
+}
+
+.study-button:hover {
+  background: #0d47a1;
+  font-weight: bold;
+}
+
+.study-button:disabled {
+  background-color: #bdbdbd; /* grey when disabled */
+  color: #f5f5f5;
+  cursor: not-allowed;
+  font-weight: bold;
+}
+
+.study-list {
+  text-align: left;
+  margin: 1.5rem auto;
+  max-width: 480px;
+}
+
+.study-center-bg h1 {
+  margin-bottom: 1.5rem; /* or your preferred value */
+}
+
+.info-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.info-link:hover {
+  color: #1976d2;
+}
+
+/* Make all text in the info pages bigger and more readable */
+.study-center-bg,
+.study-center-bg p,
+.study-center-bg ul,
+.study-center-bg li,
+.study-center-bg label,
+.study-center-bg button,
+.study-center-bg h1,
+.study-center-bg h3 {
+  font-size: 1.18rem;
+}
+
+/* Optionally, make headings even larger for clarity */
+.study-center-bg h1 {
+  font-size: 2.1rem;
+}
+
+.study-center-bg h3 {
+  font-size: 1.35rem;
+}
+
+.h2-info-pages {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Make the checkbox input bigger and keep it styled nicely */
+.study-center-bg input[type="checkbox"] {
+  width: 1.5em;
+  height: 1.5em;
+  color: #e3f0ff;
+  accent-color: #1976d2; /* Makes the checkmark blue on supported browsers */
+  margin-right: 0.6em;
+  vertical-align: middle;
+}
+
+/* Copied tooltip notification */
+.copied-tooltip {
+  position: absolute;
+  right: -10px;
+  top: -35px;
+  background: #1976d2;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeInOut 3s ease-in-out;
+  z-index: 1000;
+}
+
+.copied-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1976d2;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-5px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+
+.blue-bg-highlight {
+  color: #1976d2;
+  display: inline-block;
+}
+
+.step-divider {
+  border: none;
+  border-top: 1px solid #000; /* black and thin */
+  margin: 2rem 0!important;
+  height: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  
+}
+
+.step-divider:first-of-type {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.step-divider:last-of-type {
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
+
+
+.step-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  margin-top: 0.2em;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.7rem; /* less space between items */
+}
+
+.step-content p,
+.step-content strong,
+.step-content .blue-bg-highlight {
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+@media (max-width: 600px) {
+  .study-center-bg {
+    padding: 16px 0;
+  }
+
+  .study-center-bg > * {
+    max-width: 100vw;
+    width: 100vw;
+  }
+
+  .study-center-content {
+    padding: 18px 6px;
+    border-radius: 10px;
+    max-width: 100vw;
+    width: 100vw;
+    font-size: 1rem;
+  }
+
+  .study-center-bg h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .study-center-bg h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .study-list {
+    max-width: 98vw;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding-left: 1.2em;
+  }
+
+  .study-button {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    align-self: stretch;
+    margin-top: 1em;
+    padding: 0.8em 0.5em;
+  }
+
+  .step-row {
+    grid-template-columns: 2.2rem 1fr;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .step-number {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .step-content {
+    gap: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .inner-box-info {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100vw;
+    line-height: 1.2;
+
+  }
+
+  .padding-top-info-page {
+    padding-top: 16px !important;
+  }
+
+  .info-link {
+    word-break: break-all;
+  }
+
+  .inner-box-info h1,
+  .inner-box-info h2,
+  .inner-box-info h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .inner-box-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .inner-box-info h2 {
+    font-size: 1.25rem;
+  }
+
+  .inner-box-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .h2-info-pages {
+    text-align: left !important;
+    font-size: 1.3rem;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .inner-box-info p,
+  .inner-box-info ul,
+  .inner-box-info li {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .inner-box-info label {
+    font-size: 1rem;
+  }
+
+  .study-center-bg .study-button,
+  .study-button {
+    font-weight: bold;
+    font-size: 1rem !important;
+    padding: 0.8em 0.5em;
+  }
+
+  .input-field-code {
+    font-size: 0.85rem !important;
+    padding: 10px 3rem 10px 10px !important;
+    word-break: break-all;
+  }
+
+  .copy-button {
+    height: 1.8rem !important;
+    width: 1.8rem !important;
+    font-size: 1rem !important;
+    right: 6px !important;
+  }
+
+  .copied-tooltip {
+    right: 0 !important;
+    font-size: 0.75rem !important;
+  }
+
+  .centered-info-page > div[style*="width: 80%"] {
+    width: 100% !important;
+  }
+}

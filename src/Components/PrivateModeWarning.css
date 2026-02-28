@@ -1,0 +1,359 @@
+.faq-link {
+  color: #bfa700;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  border-bottom: 1.5px solid #ffd600;
+  padding: 0 1px 1px 1px;
+  border-radius: 2px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, border-bottom-color 0.2s;
+  display: inline;
+}
+.security-box-warning{
+   max-width: 700px !important;
+  width: 100% !important;
+  margin: 20px auto !important;
+  background-color: rgba(255, 255, 204, 0.8);
+  border: 2px solid #ffe066;
+  padding: 18px 24px;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  text-align: left;
+  border-radius: 0;
+  box-sizing: border-box !important;
+}
+
+.security-box-warning p strong {
+  display: inline !important;
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+.modal-backdrop-no-private-mode {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25); /* This darkens the area behind the modal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal-no-private-mode {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 32px 28px;
+  min-width: 280px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Blue study-info modal styles */
+.study-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.study-modal {
+   background: #e3f0ff;
+  border-radius: 8px;
+  border: 2px solid #1976d2;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  padding: 18px 24px;
+  text-align: center;
+  color: #222;
+  font-size: 1rem;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.study-modal-static {
+  position: static;
+  transform: none;
+  
+}
+
+.study-modal h2 {
+  color: #1976d2;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.study-modal p {
+  margin-bottom: 2rem;
+  font-size: 1.18rem;
+}
+
+.study-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.study-modal .study-button {
+  padding: 0.7em 2.5em;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  min-width: 8rem;
+  margin-top: 0px;
+}
+
+.study-modal .study-button:hover {
+  background: #0d47a1;
+}
+
+.study-modal .study-button-secondary {
+  padding: 0.7em 2.5em;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #bdbdbd;
+  color: #222;
+  cursor: pointer;
+  min-width: 8rem;
+}
+
+.private-video{
+width: 90%;
+max-width: 600px;
+height: 180px;
+object-fit: cover;
+border-radius: 8px;
+background: #000;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+margin-bottom: 8px;
+border: 1.5px solid #ccc;
+}
+.private-next-button{
+  max-width:90vw;
+  margin: 20px 0 0 0;
+  align-items: center;
+  display: block !important;
+}
+.button.private-next-button {
+  text-decoration: none !important;
+}
+
+
+
+@media (max-width: 600px) {
+  .security-box-warning {
+    background-color: rgba(255, 255, 204, 0.8);
+    border: 2px solid hsl(50, 100%, 50%);
+    padding: 12px 15px !important;
+    border-radius: 4px;
+    width: 85% !important;
+    max-width: 85% !important;
+    margin: 20px auto !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+  }
+
+  .security-box-warning p strong {
+    display: inline !important;
+    white-space: normal !important;
+    margin: 0 !important;
+    font-size: 1rem;
+  }
+
+  .modal-backdrop-no-private-mode {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2000;
+    padding-top: 10vw;
+    box-sizing: border-box;
+  }
+
+  .modal-no-private-mode {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    padding: 14px 4px;
+    min-width: 0;
+    max-width: 98vw;
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .study-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .study-modal {
+    background: #e3f0ff;
+    border-radius: 8px;
+    border: 2px solid #1976d2;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+    padding: 18px 6px;
+    max-width: 98vw;
+    width: 98vw;
+    text-align: center;
+    color: #222;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .study-modal-static {
+    width: 85% !important;
+    max-width: 85% !important;
+    padding: 18px 12px !important;
+    margin: 20px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .study-modal h2 {
+    color: #1976d2;
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .study-modal p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .study-modal-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .study-modal .study-button,
+  .study-modal .study-button-secondary {
+    padding: 0.7em 0.5em;
+    font-size: 0.97rem;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .study-modal .study-button-secondary {
+    background-color: #bdbdbd;
+    color: #222;
+  }
+
+  .text-main.text-main-private{
+    text-align:center !important;
+  }
+
+  .button.private-next-button {
+  text-decoration: none !important;
+}
+  .button.private-next-button{
+    margin: 20px auto !important;
+    width: 40vw !important;
+    max-width: 320px !important;
+    text-align: center !important;
+    font-size: 1rem !important;
+    padding: 12px 0 !important;
+}
+
+  
+
+
+
+
+
+  .card {
+    margin-top: 10px !important;
+  }
+
+  .card h1 {
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .card p.text-small {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+  }
+
+  .card video {
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 150px !important;
+  }
+
+  .card > div[style*="marginBottom"][style*="30px"],
+  .card > div[style*="margin-bottom"][style*="30px"] {
+    margin-bottom: 15px !important;
+  }
+
+  .card > div[style*="display: flex"][style*="gap: 30px"] {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 0 5% !important;
+  }
+
+  .card > div[style*="display: flex"][style*="flexDirection: column"] {
+    margin-bottom: 15px !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] {
+    font-size: 0.85rem !important;
+    padding: 12px 14px !important;
+    background-color: #fafafa !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] h3,
+  .card > div[style*="background-color: #f7f7f7"] strong {
+    font-size: 0.85rem !important;
+    margin-bottom: 6px !important;
+    display: block !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] p {
+    margin: 6px 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] p[style*="fontSize: 1.1rem"],
+  .card > div[style*="background-color: #f7f7f7"] p[style*="font-size: 1.1rem"] {
+    font-size: 0.8rem !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] ul {
+    padding-left: 20px !important;
+    margin: 8px 0 6px 0 !important;
+    text-align: left !important;
+  }
+
+  .card > div[style*="background-color: #f7f7f7"] li {
+    margin-bottom: 6px !important;
+    line-height: 1.35 !important;
+  }
+}
+

@@ -1,0 +1,125 @@
+/* Container for the entire process bar */
+.process-bar-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+/* Row that holds the circle steps and dividers */
+.icon-row {
+  display: flex;
+  align-items: center;
+  height: 40px; /* Match the circle height */
+}
+
+/* Wrap each step (circle plus label) */
+.process-step {
+  position: relative;
+  flex-shrink: 0;
+  /* Ensure the container has at least the width of the icon */
+  width: 40px;
+  text-align: center;
+}
+
+/* Container for the circle (ensures fixed size) */
+.step-icon-container {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+/* The step circle */
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;  /* Grey initially */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.step-icon.active,
+.step-icon.completed {
+  background-color: #ffd600; /* Primary-yellow */
+}
+
+/* Label centered below the circle – its horizontal center aligns with the parent container's center */
+.step-label {
+  position: absolute;
+  top: 50px;           /* Adjust vertical spacing as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Container for the divider between steps */
+.step-divider-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center; /* Center the divider vertically */
+  height: 40px;        /* Match the circle height */
+}
+
+/* The divider (connector) that fills available space */
+.step-divider {
+  height: 4px;
+  background-color: #e0e0e0;  /* Grey initially */
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 2px;
+}
+
+/* When the divider is “completed,” change its colour */
+.step-divider.completed {
+  background-color: #ffd600;
+}
+
+.step-divider:first-of-type {
+  margin-bottom: 0;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .process-bar-container {
+    width: 95%;
+    margin-top: 60px;
+  }
+
+  .step-icon-container {
+    width: 32px;
+    height: 32px;
+  }
+
+  .step-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .icon-row {
+    height: 32px;
+  }
+
+  .step-divider-container {
+    height: 32px;
+  }
+
+  .step-label {
+    font-size: 0.65rem;
+    top: 38px;
+    max-width: 80px;
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .process-step {
+    width: 32px;
+  }
+}
