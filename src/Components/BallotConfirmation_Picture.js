@@ -137,8 +137,8 @@ function BallotConfirmationPicture(setIsLoggedIn) {
   }, [setSelectedImage]);
 
   // Retrieve candidate name from navigation state; fallback if not set.
-  const votedCandidate = location.state?.votedCandidate || "Candidate Unknown";
-
+ const rawCandidate = location.state?.votedCandidate || "Candidate Unknown";
+  const votedCandidate = rawCandidate.includes("_") ? rawCandidate.split("_")[0] : rawCandidate;
   const now = new Date();
   const dateTime = now.toLocaleString();
 
