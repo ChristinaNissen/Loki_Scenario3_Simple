@@ -32,12 +32,9 @@ const ConsentForm = () => {
         <h3 className="title-margin-top">Description of research</h3>
         <p>
           Before entering the voting system, you will be asked to download an
-          instruction paper for the voting system. After entering the system,
-          you are asked to test the voting system by following the instruction
-          paper. This will be followed by a questionnaire, which you will get
-          redirected to from the last page of the voting system. Once you have
-          completed the questionnaire, you will be redirected to Prolific. The
-          total duration of the study is approximately X minutes. We highly
+          instruction paper for the voting system and instructed which task to complete.
+          Once you have completed the study tasks in the voting system, you will be redirected to Prolific. The
+          total duration of the study is approximately 10 minutes. We highly
           recommend using a desktop device for the study.
         </p>
         <h3>Withdrawal</h3>
@@ -59,33 +56,22 @@ const ConsentForm = () => {
         </p>
           <h3 className="title-margin-top">Ethical Considerations and Your Wellbeing</h3>
         <p>
-          The voting system you are testing is designed to help prevent coercion in online voting. In the following survey, you may be asked questions such as "Imagine you are coerced, what do you do?" These questions are intended to understand how users might respond to coercion scenarios and to improve the security of online voting. If you feel any discomfort or distress from these questions or the study in general, you may leave the study at any time without penalty.
+          The voting system you are testing is designed to help prevent coercion in online voting. In the study, you may be instructed to "Imagine you are coerced, cast an invalid vote in the voting system." These instructions are intended to understand whether users can use the voting system under such scenarios. If you feel any discomfort or distress from these instructions or the study in general, you may leave the study at any time without penalty.
         </p>
         <h3 className="title-margin-top">Compensation</h3>
         <p>
-          Each participant will receive X £ at the conclusion of the study
+          Each participant will receive 1.5 £ at the conclusion of the study
           through Prolific.
         </p>
         <h3 className="title-margin-top">How we handle and delete the data</h3>
         <p>
           If a participant discloses any personal information about themselves
-          or other people in the voting system or when answering the
-          questionnaire that could lead to identification, the researchers will remove this from the dataset and
+          or other people in the voting system, the researchers will remove this from the dataset and
           replace it with a placeholder.{" "}
         </p>
         <h3 className="title-margin-top">What data we collect</h3>
-        <p>
-          The participants will be asked to share the following personal data:
-        </p>
-        <ul className="text-margin-top">
-          <li>Gender</li>
-          <li>Age</li>
-          <li>Nationality</li>
-          <li>Level of education</li>
-        </ul>
-        <p className="text-margin-top">
-          We further collect the answers that the participants give to the
-          questions in the questionnaire, as well as data that the participants are asked to provide within
+        <p >
+          We collect the data that the participants are asked to provide within
           the voting system. Please note that all candidates on the digital
           voting paper are fictional and the participants are asked to vote for
           a specific candidate before they enter the voting system. Therefore,
@@ -113,34 +99,18 @@ const ConsentForm = () => {
         </p>
         <ul>
           <li className="text-margin-top">
-            <span className="bold-text">SurveyXact:</span> We use SurveyXact to
-            carry out the survey. Personal data (gender, age, nationality, level
-            of education) will be collected through the questions and stored on
-            the SurveyXact platform. The third parties mentioned below will not
-            have access to this data. Please refer to SurveyXact’s privacy
-            policy for more information:{" "}
-            <a
-              className="info-link"
-              href="https://www.surveyxact.com/product/data-security/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://www.surveyxact.com/product/data-security/
-            </a>
-          </li>
-          <li className="text-margin-top">
-            <span className="bold-text">Netlify:</span> We use Netlify to host
-            the voting system. Netlify might collect your IP address and other
+            <span className="bold-text">Vercel:</span> We use Vercel to host
+            the voting system. Vercel might collect your IP address and other
             personal data, however, we will not have access to this data and
-            netlify is not sharing any IP addresses or other personal data.
-            Please refer to netlify’s privacy policy for more information:{" "}
+            Vercel is not sharing any IP addresses or other personal data.
+            Please refer to Vercel’s privacy policy for more information:{" "}
             <a
               className="info-link"
-              href="https://www.netlify.com/privacy/"
+              href="https://vercel.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.netlify.com/privacy/
+              https://vercel.com/privacy
             </a>
           </li>
           <li className="text-margin-top">

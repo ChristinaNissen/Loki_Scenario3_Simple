@@ -26,17 +26,16 @@ const ConsentForm2 = () => {
       <div className="inner-box-info padding-top-info-page" style={{ maxWidth: "35rem" }}>
         <h1 className="h1-info-pages">Welcome back!</h1>
         <p>
-          In the previous part of the study, you cast your true vote in an online voting system. In this part of the study, we kindly ask you to cast an invalid vote in the voting system to simulate resisting coercion after having cast a true vote already in the election. Before proceeding, we ask for your consent.
+          In the previous part of the study, you cast your true vote in an online voting system. In this part of the study, we kindly ask you to update your vote in the voting system. Before proceeding, we ask for your consent.
         </p>
         <h3 className="title-margin-top">Description of research</h3>
         <p>
           Before entering the voting system, you will be asked to download an
-          instruction paper for the voting system. After entering the system,
-          you are asked to test the voting system by following the instruction
-          paper. This will be followed by a questionnaire, which you will get
+          instruction paper for the voting system and instructed which task to complete.
+          This will be followed by a questionnaire, which you will get
           redirected to from the last page of the voting system. Once you have
           completed the questionnaire, you will be redirected to Prolific. The
-          total duration of the study is approximately X minutes. We highly
+          total duration of the study is approximately 15 minutes. We highly
           recommend using a desktop device for the study.
         </p>
         <h3>Withdrawal</h3>
@@ -54,15 +53,15 @@ const ConsentForm2 = () => {
           >
            https://participant-help.prolific.com/en/articles/445041-how-to-return-a-submission-on-prolific
           </a>
-          After completing the study, you may still request to have your data deleted until 14 days after submitting the survey by contacting the researhers and provide your Prolific ID, which allows us to locate and remove your data. After this deadline, it will no longer be possible to delete your data.
+          After completing the study, you may still request to have your data deleted until 14 days after submitting the survey by contacting the researchers and providing your Prolific ID, which allows us to locate and remove your data. After this deadline, it will no longer be possible to delete your data.
         </p>
           <h3 className="title-margin-top">Ethical Considerations and Your Wellbeing</h3>
         <p>
-          The voting system you are testing is designed to help prevent coercion in online voting. In the following survey, you may be asked questions such as "Imagine you are coerced, what do you do?" These questions are intended to understand how users might respond to coercion scenarios and to improve the security of online voting. If you feel any discomfort or distress from these questions or the study in general, you may leave the study at any time without penalty.
+          The voting system you are testing is designed to help prevent coercion in online voting. In the study, you may be instructed to "Imagine you are coerced, cast an invalid vote in the voting system." These instructions are intended to understand whether users can use the voting system under such scenarios. If you feel any discomfort or distress from these instructions or the study in general, you may leave the study at any time without penalty.
         </p>
         <h3 className="title-margin-top">Compensation</h3>
         <p>
-          Each participant will receive X £ at the conclusion of the study
+          Each participant will receive 2.25 £ at the conclusion of the study
           through Prolific.
         </p>
         <h3 className="title-margin-top">How we handle and delete the data</h3>
@@ -128,18 +127,18 @@ const ConsentForm2 = () => {
             </a>
           </li>
           <li className="text-margin-top">
-            <span className="bold-text">Netlify:</span> We use Netlify to host
-            the voting system. Netlify might collect your IP address and other
+            <span className="bold-text">Vercel:</span> We use Vercel to host
+            the voting system. Vercel might collect your IP address and other
             personal data, however, we will not have access to this data and
-            netlify is not sharing any IP addresses or other personal data.
-            Please refer to netlify’s privacy policy for more information:{" "}
+            Vercel is not sharing any IP addresses or other personal data.
+            Please refer to Vercel’s privacy policy for more information:{" "}
             <a
               className="info-link"
-              href="https://www.netlify.com/privacy/"
+              href="https://vercel.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.netlify.com/privacy/
+              https://vercel.com/privacy
             </a>
           </li>
           <li className="text-margin-top">
