@@ -59,7 +59,7 @@ const Voting = () => {
         navigate("/confirmation2", { state: { votedCandidate: candidateName }, replace: true });
       } else {
         await saveVote(candidateName);
-        navigate("/confirmation2", { state: { votedCandidate: existingCandidate }, replace: true });
+        navigate("/confirmation2", { state: { votedCandidate: candidateName }, replace: true });
       }
     } catch (error) {
       console.error("Error handling vote confirmation:", error);
