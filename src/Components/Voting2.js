@@ -53,11 +53,12 @@ const Voting = () => {
       // If candidate exists, check if correct selections is true
       const correctSelections = await getBooleanSelection();
       
-      if (votedBefore === false || (votedBefore === true && correctSelections === false)) {
-        // Keep existing candidate, don't updateif not voted before or if voted before but incorrect selections
+     if (correctSelections === true && votedBefore === true) {
+        // Save vote when both conditions are met
+        await saveVote(candidateName);
         navigate("/confirmation2", { state: { votedCandidate: candidateName }, replace: true });
       } else {
-        await saveVote(candidateName);
+        // Just navigate without saving if conditions not met
         navigate("/confirmation2", { state: { votedCandidate: candidateName }, replace: true });
       }
     } catch (error) {
