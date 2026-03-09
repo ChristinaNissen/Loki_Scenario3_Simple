@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { getUserID, logoutVoter } from "../../API/Voter";
 import "./study-info.css";
 
-const StudyInfo2 = () => {
+const StudyInfo4 = () => {
   const [userID, setUserID] = useState(null);
   const [showCopiedMessage, setShowCopiedMessage] = useState(false);
 
     useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Prevent browser back button from leaving studyinfo2 page
+    // Prevent browser back button from leaving studyinfo4 page
     const handlePopState = (event) => {
       event.preventDefault();
       window.history.pushState(null, null, window.location.pathname);
@@ -118,7 +118,7 @@ const StudyInfo2 = () => {
           onClick={async () => {
             await logoutVoter();
             window.location.href =
-              "https://www.survey-xact.dk/LinkCollector?key=T5JG3UXLJ215&condition=3.0&longvarnames=";
+              "https://www.survey-xact.dk/LinkCollector?key=T5JG3UXLJ215&condition=5.0&longvarnames=";
           }}
         >
           Go to survey
@@ -128,4 +128,4 @@ const StudyInfo2 = () => {
   );
 };
 
-export default StudyInfo2;
+export default StudyInfo4;
