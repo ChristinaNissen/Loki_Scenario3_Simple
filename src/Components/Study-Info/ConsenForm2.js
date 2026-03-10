@@ -26,7 +26,7 @@ const ConsentForm2 = () => {
       <div className="inner-box-info padding-top-info-page" style={{ maxWidth: "35rem" }}>
         <h1 className="h1-info-pages">Welcome back!</h1>
         <p>
-          In the previous part of the study, you cast your true vote in an online voting system. In this part of the study, we kindly ask you to update your vote in the voting system. Before proceeding, we ask for your consent.
+          The purpose of this study is to investigate user experience in an online voting system intended for general elections. Before proceeding, we ask for your consent.
         </p>
         <h3 className="title-margin-top">Description of research</h3>
         <p>
