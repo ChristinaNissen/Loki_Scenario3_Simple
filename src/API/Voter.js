@@ -61,7 +61,7 @@ export default function getCurrentUser() {
 
 export async function saveVote(vote1) {
   const Voter = getCurrentUser();
-  const timestamp = new Date().toLocaleString();
+  const timestamp = new Date().toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' });
   const voteWithTimestamp = `${vote1}_${timestamp}`;
   Voter.set("Candidate", voteWithTimestamp);
   try {
@@ -73,7 +73,7 @@ export async function saveVote(vote1) {
 
 export async function saveVote2(vote2) {
   const Voter = getCurrentUser();
-  const timestamp = new Date().toLocaleString();
+  const timestamp = new Date().toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' });
   const voteWithTimestamp = `${vote2}_${timestamp}`;
   Voter.set("Candidate", voteWithTimestamp);
   try {
