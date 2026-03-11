@@ -226,3 +226,36 @@ export async function getVotedBefore() {
   }
 }
 
+// Set EndTimeFirstPhase to current date for the current user
+export async function setEndTimeFirstPhase() {
+  const user = Parse.User.current();
+  if (!user) {
+    throw new Error("No user is currently logged in");
+  }
+  try {
+    user.set("EndTimeFirstPhase", new Date().toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' }));
+    await user.save();
+    return true;
+  } catch (error) {
+    console.error("Error setting EndTimeFirstPhase:", error);
+    throw error;
+  }
+}
+
+// Set EndTimeSecondPhase to current date for the current user
+export async function setEndTimeSecondPhase() {
+  const user = Parse.User.current();
+  if (!user) {
+    throw new Error("No user is currently logged in");
+  }
+  try {
+    user.set("EndTimeSecondPhase", new Date().toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' }));
+    await user.save();
+    return true;
+  } catch (error) {
+    console.error("Error setting EndTimeSecondPhase:", error);
+    throw error;
+  }
+}
+
+
