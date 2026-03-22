@@ -5,6 +5,7 @@ import "./study-info.css";
 const StudyInfo4 = () => {
   const [userID, setUserID] = useState(null);
   const [showCopiedMessage, setShowCopiedMessage] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
 
     useEffect(() => {
     window.scrollTo(0, 0);
@@ -115,14 +116,40 @@ const StudyInfo4 = () => {
          <button
           className="study-button"
           style={{ marginTop: "2rem" }}
-          onClick={async () => {
-            await logoutVoter();
-            window.location.href =
-              "https://www.survey-xact.dk/LinkCollector?key=T5JG3UXLJ215&condition=5.0&longvarnames=";
-          }}
+               onClick={() => setShowConfirmModal(true)}
         >
-          Go to survey
+          Go to next platform
         </button>
+
+        {showConfirmModal && (
+          <div className="study-modal-backdrop">
+            <div className="study-modal study-info-confirm-modal">
+              <h2>Important</h2>
+              <p>
+                Once you proceed to the next platform, you may not be able to return to retrieve your number. Please make sure you have copied it before continuing.
+              </p>
+              <div className="study-modal-actions">
+                <button
+                  className="study-button-secondary"
+                  onClick={() => setShowConfirmModal(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="study-button"
+                  onClick={async () => {
+                    setShowConfirmModal(false);
+                    await logoutVoter();
+                    window.location.href =
+                      "https://www.survey-xact.dk/LinkCollector?key=T5JG3UXLJ215&condition=5.0&longvarnames=";
+                  }}
+                >
+                  I understand
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
