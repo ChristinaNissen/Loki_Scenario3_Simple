@@ -35,7 +35,7 @@ const ConsentForm2 = () => {
           This will be followed by a questionnaire, which you will get
           redirected to from the last page of the voting system. Once you have
           completed the questionnaire, you will be redirected to Prolific. The
-          total duration of the study is approximately 15 minutes. We highly
+          total duration of the study is approximately 13 minutes. We highly
           recommend using a desktop device for the study.
         </p>
         <h3>Withdrawal</h3>
@@ -60,7 +60,7 @@ const ConsentForm2 = () => {
 The voting system you are testing is designed to help prevent coercion in online voting. During the study, you may encounter situations that explore how the system handles different voting scenarios. If you experience any discomfort or distress at any point, you can leave the study without any penalty.        </p>
         <h3 className="title-margin-top">Compensation</h3>
         <p>
-          Each participant will receive 2.25 £ at the conclusion of the study
+          Each participant will receive 1.95 £ at the conclusion of the study
           through Prolific.
         </p>
         <h3 className="title-margin-top">How we handle and delete the data</h3>
