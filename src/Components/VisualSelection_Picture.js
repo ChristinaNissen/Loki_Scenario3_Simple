@@ -314,7 +314,11 @@ const VisualSelectionPicture = () => {
                         className={`visual-selection-picture${selected.includes(imgSrc) ? " selected" : ""}`}
                         onClick={() => handleSelect(imgSrc)}
                         style={{ cursor: "pointer" }}
+                        title={selected.includes(imgSrc) ? "Click to deselect" : "Click to select"}
                       >
+                        {selected.includes(imgSrc) && (
+                          <span className="selected-badge" aria-hidden="true">✓</span>
+                        )}
                         <div className="picture-img-wrapper">
                           <img src={imgSrc} alt={`visual-${page * PAGE_SIZE + idx}`} />
                         </div>
