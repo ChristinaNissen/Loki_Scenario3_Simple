@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./study-info.css";
-import Instructions from "../../Assets/Instructions_e-voting.pdf";
+import Instructions from "../../Assets/Voting_System_Instructions.pdf";
 import { downloadFile } from "../../util";
 
 const StudyInfo3 = () => {
@@ -44,7 +44,20 @@ const StudyInfo3 = () => {
             <div className="step-number">1</div>
             <div className="step-content">
               <p>
-             All candidates are fictional. In the first part of the study, you cast a true vote for the candidate 'John Doe'. In this second part, we ask that you <strong>update your vote</strong> for the candidate 'Sofia Lee' in the voting system.              </p>
+Imagine that the general election in your country is still ongoing, and that voters can access the system at any time during the election period to update their vote for flexibility.
+<br></br>
+<br></br>
+Earlier in the election period, you used this system to cast your vote for John Doe.
+<br></br>
+<br></br>
+Now imagine that you learn new information about John Doe that leads you to change your mind. You decide to use the online voting system to update your vote for the candidate Sofia Lee, replacing your previous selection.
+<br></br>
+<br></br>
+Please use the online voting system to go through the process and update your vote for Sofia Lee in the election, just as you would if this were a real election.
+<br></br>
+<br></br>
+Take your time and complete the process as you would in a real-life situation.             
+             </p>
               <label className="check-box blue-bg-highlight">
                 <input
                   type="checkbox"
@@ -52,7 +65,7 @@ const StudyInfo3 = () => {
                   onChange={handleChangeCheckbox}
                   className="blue-bg-highlight"
                 />
-I understand and will update my vote for the candidate 'Sofia Lee' in the election.              </label>
+        I understand that I should update my vote to Sofia Lee in the election.</label>
             </div>
           </div>
 
@@ -62,12 +75,12 @@ I understand and will update my vote for the candidate 'Sofia Lee' in the electi
           <div className="step-row">
             <div className="step-number">2</div>
             <div className="step-content">
-                         
+                  <p>   
                 Please download the instructions which you need to follow to complete the General Election 2025.
          
               
                 In a real election you would get these instructions as a physical or digital letter by the election authorities.
-            
+            </p> 
               <p className="text-margin-top">
                 <span className="blue-bg-highlight">
                   Make sure that you can access the letter throughout the study.
@@ -98,7 +111,8 @@ I understand and will update my vote for the candidate 'Sofia Lee' in the electi
 
           <hr className="step-divider" />
 
-          <div style={{ paddingTop: "1rem" }}>
+          <div>
+                      <p> In the next step, you will be redirected to the front page of the voting system. Click “Start” to proceed.</p>
             <button
               id="submit-pid"
               type="submit"
