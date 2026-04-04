@@ -251,7 +251,7 @@ This step verifies your identity, ensuring that only you can change your vote by
         placeholder="Search for your vote identifier..."
         value={search}
         onChange={e => setSearch(e.target.value)}
-        aria-label="Search for your word"
+        aria-label="Search for your vote identifier"
       />
     </div>
     <div className="letter-buttons">
