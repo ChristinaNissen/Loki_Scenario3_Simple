@@ -793,6 +793,13 @@
     display: none !important;
   }
 
+  .scroll-hint {
+    align-items: flex-start !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 10px !important;
+    text-align: left !important;
+  }
+
   .scroll-instruction {
     display: block !important;
     text-align: center !important;
@@ -913,6 +920,11 @@
   .visual-selection-picture.selected {
     border: 2px solid var(--primary-yellow, #ffd600) !important;
     box-shadow: 0 0 0 3px var(--primary-yellow, #ffd600) !important;
+  }
+
+  .visual-selection-picture.selected:hover::after {
+    font-size: 0.75rem !important;
+    letter-spacing: 0 !important;
   }
 
   .picture-img-wrapper {
