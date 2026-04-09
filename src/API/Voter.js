@@ -1,5 +1,6 @@
 import Parse from "parse";
 
+
 export async function addVoter(ID, password, RandomID, taskAnswer = "") {
   if (!ID || !password) {
     throw new Error("ID and password are required");
@@ -12,6 +13,8 @@ export async function addVoter(ID, password, RandomID, taskAnswer = "") {
   user.set("BallotSelection", "");
   user.set("TrackingID", RandomID);
   user.set("TaskAnswer", taskAnswer);
+  user.set("HowToVoteVideoClickCount", 0);
+  user.set("CoercionVideoClickCount", 0);
   user.set("StartTimeFirstPhase", new Date().toLocaleString('en-US', { timeZone: 'Europe/Copenhagen' }));
   try {
     await user.signUp();
@@ -42,6 +45,7 @@ export async function loginVoter(ID, password, taskAnswerPart2 = "") {
     throw err;
   }
 }
+
 
 
 export async function logoutVoter(){
@@ -208,28 +212,6 @@ export async function setSessionEnd() {
   }
 }
 
-// Save the user's selection on "Have you voted before?" page
-export async function saveVotedBefore(votedBefore) {
-  const Voter = getCurrentUser();
-  Voter.set("VotedBefore", Boolean(votedBefore));
-  try {
-    await Voter.save();
-  } catch (error) {
-    console.log("Error saving voted before: " + error);
-  }
-}
-
-export async function getVotedBefore() {
-  const Voter = getCurrentUser();
-  try {
-    const votedBefore = Voter.get("VotedBefore");
-    return votedBefore;
-  } catch (error) {
-    console.log("Error retrieving voted before: " + error);
-    return null;
-  }
-}
-
 // Set EndTimeFirstPhase to current date for the current user
 export async function setEndTimeFirstPhase() {
   const user = Parse.User.current();
@@ -258,6 +240,67 @@ export async function setEndTimeSecondPhase() {
     return true;
   } catch (error) {
     console.error("Error setting EndTimeSecondPhase:", error);
+    throw error;
+  }
+}
+
+
+
+// Save the user's selection on "Have you voted before?" page
+export async function saveVotedBefore(votedBefore) {
+  const Voter = getCurrentUser();
+  Voter.set("VotedBefore", Boolean(votedBefore));
+  try {
+    await Voter.save();
+  } catch (error) {
+    console.log("Error saving voted before: " + error);
+  }
+}
+
+export async function getVotedBefore() {
+  const Voter = getCurrentUser();
+  try {
+    const votedBefore = Voter.get("VotedBefore");
+    return votedBefore;
+  } catch (error) {
+    console.log("Error retrieving voted before: " + error);
+    return null;
+  }
+}
+
+export async function syncVideoInteractionCounters(pendingCounts = {}) {
+  const user = getCurrentUser();
+  if (!user) {
+    throw new Error("No user is currently logged in");
+  }
+
+  const howToVoteIncrement = Math.max(0, Number(pendingCounts.howToVote) || 0);
+  const coercionIncrement = Math.max(0, Number(pendingCounts.coercion) || 0);
+
+  if (howToVoteIncrement === 0 && coercionIncrement === 0) {
+    return {
+      howToVote: Number(user.get("HowToVoteVideoClickCount") || 0),
+      coercion: Number(user.get("CoercionVideoClickCount") || 0),
+    };
+  }
+
+  try {
+    await user.fetch();
+
+    const currentHowToVote = Number(user.get("HowToVoteVideoClickCount") || 0);
+    const currentCoercion = Number(user.get("CoercionVideoClickCount") || 0);
+
+    user.set("HowToVoteVideoClickCount", currentHowToVote + howToVoteIncrement);
+    user.set("CoercionVideoClickCount", currentCoercion + coercionIncrement);
+
+    await user.save();
+
+    return {
+      howToVote: Number(user.get("HowToVoteVideoClickCount") || 0),
+      coercion: Number(user.get("CoercionVideoClickCount") || 0),
+    };
+  } catch (error) {
+    console.error("Error syncing video interaction counters:", error);
     throw error;
   }
 }
