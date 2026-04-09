@@ -142,8 +142,8 @@ Now imagine that you learn new information about John Doe that leads you to chan
                     <input
                       type="radio"
                       name="task-check"
-                      value="vote-for-sofia-lee"
-                      checked={selectedTaskOption === "vote-for-sofia-lee"}
+                      value="update-vote-for-sofia-lee"
+                      checked={selectedTaskOption === "update-vote-for-sofia-lee"}
                       onChange={handleTaskOptionChange}
                     />
                     Update your vote for Sofia Lee.
@@ -152,8 +152,8 @@ Now imagine that you learn new information about John Doe that leads you to chan
                     <input
                       type="radio"
                       name="task-check"
-                      value="follow-pressure"
-                      checked={selectedTaskOption === "follow-pressure"}
+                      value="update-vote-for-martin-taylor"
+                      checked={selectedTaskOption === "update-vote-for-martin-taylor"}
                       onChange={handleTaskOptionChange}
                     />
                     Update your vote for Martin Taylor.
