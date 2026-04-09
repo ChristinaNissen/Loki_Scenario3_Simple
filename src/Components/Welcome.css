@@ -104,6 +104,30 @@ section.card h2.before-vote-heading {
   width: 100%;
 }
 
+.welcome-process-intro {
+  margin: 0 0 22px 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #1f1f1f;
+  font-size: 1rem;
+  line-height: 1.75;
+  box-shadow: none;
+}
+
+.welcome-process-intro-lead {
+  display: block;
+  margin-bottom: 8px;
+  color: #111;
+  font-size: 1.03rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .info-item {
   transition: background 0.2s;
 }
@@ -429,6 +453,17 @@ section.card:hover {
   .overview-image-container {
     display: none;
   }
+
+  .welcome-process-intro {
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .welcome-process-intro-lead {
+    font-size: 1rem;
+  }
   
   /* Show text steps on mobile */
   .voting-steps-mobile {
@@ -663,7 +698,7 @@ section.card h2.before-vote-heading, section.card h2.before-vote-heading * {
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
   }
 
 
